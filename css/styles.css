@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body, html {
+    background-color: black;
+    color: lightgray;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0); 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px 0;
+    z-index: 1000; 
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+}
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 15px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f49910;
+}
+
+
+#home {
+    height: 100vh;
+    width: 100vw;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-image: url('../images/intelCircuit.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-color: rgba(0, 0, 0, 0.55);
+    background-blend-mode: multiply;
+
+    text-align: center;
+
+}
+
+#home h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 120px;
+    
+    color: lightgray;
+    text-transform: uppercase;
+    position: relative;
+    top: 40vh;
+}
+
+#home p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    
+    color: lightgray;
+    text-transform: uppercase;
+    position: relative;
+    top: 40vh;
+}
+
+#skills {
+    padding: 50px 20px;
+    height: 100vh;
+    text-align: center;
+    background-image: url('../images/blackboard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: multiply;
+
+}
+
+#skills h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: lightgray;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    top: 20%;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    top: 30%;
+}
+
+.skill-card {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    background-color:rgba(255, 255, 255, 0.35);
+}
+
+.skill-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #007BFF; /* Highlight skill titles with a primary color */
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.skill-card:hover h3{
+    color:#f49910;
+}
+
+.skill-card p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: lightgray; /* Gray text for descriptions */
+    line-height: 1.6; /* Improves readability */
+    transform: color 0.3s ease;
+}
+
+.skill-card:hover p {
+    color: black;
+}
+
+/* General Section Styling */
+#projects {
+    padding: 50px 20px;
+    background-color: #111111; /* Dark grey background */
+    color: #ddd; /* Light grey text */
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Project Row Styling */
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 20px;
+}
+
+.project-row.reverse {
+    flex-direction: row-reverse; /* Flip thumbnail and description */
+}
+
+/* Thumbnail Styling */
+.project-thumbnail {
+    flex: 1;
+    text-align: center;
+}
+
+.project-thumbnail img {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-thumbnail .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-thumbnail .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Description Styling */
+.project-description {
+    flex: 2;
+    text-align: left;
+    padding: 20px;
+}
+
+.project-description h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.project-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-row.reverse {
+        flex-direction: column;
+    }
+
+    .project-thumbnail, .project-description {
+        text-align: center;
+    }
+}

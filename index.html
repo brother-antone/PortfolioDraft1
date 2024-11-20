@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Antonevich Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="#home">// Home</a>
+        <a href="#skills">// Skills</a>
+        <a href="#projects">// Projects</a>
+        <a href="#resume">// Resume</a>
+        <a href="#contactme">// Contact Me</a>
+    </nav>
+
+    <section id="home">
+        <h1>Leo Antonevich</h1>
+        <p>Computer Engineer | Embedded Systems and FPGA Development</p>
+        <!-- <p>Explore my projects, learn more about my journey, and connect with me to collaborate or discuss exciting opportunities.</p> -->
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <!-- Skill 1: C/C++ -->
+            <div class="skill-card">
+                <h3>C/C++</h3>
+                <p>Experienced in developing efficient algorithms, data structures, and low-level systems programming.</p>
+            </div>
+    
+            <!-- Skill 2: VHDL -->
+            <div class="skill-card">
+                <h3>VHDL</h3>
+                <p>Proficient in designing digital logic circuits and hardware description using VHDL on FPGA platforms.</p>
+            </div>
+    
+            <!-- Skill 3: Quartus Prime & ModelSim -->
+            <div class="skill-card">
+                <h3>Quartus Prime & ModelSim</h3>
+                <p>Skilled in synthesizing and simulating complex digital designs using Quartus Prime and debugging with ModelSim.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-row">
+                <div class="project-thumbnail">
+                    <img src="images/vga-controller-thumbnail.png" alt="VGA Controller">
+                    <a href="vga-controller.html" class="btn">View Here</a>
+                </div>
+                <div class="project-description">
+                    <h3>VGA Controller</h3>
+                    <p>
+                        Designed and implemented a Video Graphics Array (VGA) controller on the DE1-SoC board. The system achieved a 1280x1024 resolution at 60 Hz refresh rate.
+                        Key features include signal synchronization using a phase-locked loop (PLL), graphical figure manipulation, and color control via switches. This project
+                        demonstrated proficiency in VGA signal generation, synchronization logic, and hardware design using VHDL.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="project-row reverse">
+                <div class="project-description">
+                    <h3>Digital Audio System</h3>
+                    <p>
+                        Developed a digital audio system that captures analog sound via a microphone, converts it to digital signals, processes the data, and plays it back through speakers.
+                        Implemented with the DE1-SoC board and the WM8731 CODEC, the system utilized real-time audio processing and achieved high-quality audio output with minimal latency.
+                    </p>
+                </div>
+                <div class="project-thumbnail">
+                    <img src="images/audio-system-thumbnail.png" alt="Digital Audio System">
+                    <a href="digital-audio-system.html" class="btn">View Here</a>
+                </div>
+            </div>
+    
+            <!-- Project 3 -->
+            <div class="project-row">
+                <div class="project-thumbnail">
+                    <img src="images/hps-fpga-thumbnail.png" alt="HPS-FPGA Integration">
+                    <a href="hps-fpga.html" class="btn">View Here</a>
+                </div>
+                <div class="project-description">
+                    <h3>HPS-FPGA Integration</h3>
+                    <p>
+                        Integrated the Hard Processor System (HPS) and FPGA sides of the DE1-SoC board to process accelerometer data and display tilt angles on LEDs in real-time.
+                        The project utilized memory-mapped I/O for efficient hardware-software communication, showcasing seamless integration of embedded systems concepts.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Project 4 -->
+            <div class="project-row reverse">
+                <div class="project-description">
+                    <h3>RISC CPU Design</h3>
+                    <p>
+                        Currently designing a custom Reduced Instruction Set Computer (RISC) CPU architecture with a focus on optimizing instruction sets, control logic, and pipeline efficiency.
+                        The design includes implementing key components such as an Arithmetic Logic Unit (ALU), control unit, and memory access using VHDL.
+                    </p>
+                </div>
+                <div class="project-thumbnail">
+                    <img src="images/risc-cpu-thumbnail.png" alt="RISC CPU Design">
+                    <a href="risc-cpu.html" class="btn">View Here</a>
+                </div>
+            </div>
+    
+            <!-- Project 5 -->
+            <div class="project-row">
+                <div class="project-thumbnail">
+                    <img src="images/ir-decoding-thumbnail.png" alt="IR Signal Decoding">
+                    <a href="ir-decoding.html" class="btn">View Here</a>
+                </div>
+                <div class="project-description">
+                    <h3>IR Signal Decoding</h3>
+                    <p>
+                        Developed an infrared (IR) signal decoding system to process NEC protocol signals. This project involved implementing a state machine in VHDL to read, decode,
+                        and verify 32-bit IR signals. The decoded output was displayed on seven-segment displays, enabling practical applications such as remote control systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p><a href="resume.pdf" target="_blank" class="btn">Download Resume</a></p>
+    </section>
+
+    <section id='contactme'>
+        <h2> Contact Me</h2>
+        <p> Contact me please!</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Leo Antonevich | Embedded Systems Portfolio</p>
+        <p><a href="mailto:lda68@miami.edu">lda68@miami.edu</a></p>
+    </footer>
+    <script src="/javascript/script.js"></script>
+</body>
+</html>
