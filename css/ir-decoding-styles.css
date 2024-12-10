@@ -1,0 +1,121 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* General Body and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: black;
+    color: lightgray;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f49910;
+}
+
+/* Section Styling */
+section {
+    padding: 100px 20px 60px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f49910;
+}
+
+section article h3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    margin-top: 30px;
+}
+
+section p, section li {
+    font-size: 18px;
+    font-weight: 400;
+    color: lightgray;
+    margin-bottom: 15px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* List Style */
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 40px auto 60px;
+}
+
+.arrow-btn {
+    color: white;
+    text-decoration: none;
+    background: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+footer p, footer a {
+    color: lightgray;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: #f49910;
+}

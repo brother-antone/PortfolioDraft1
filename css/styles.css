@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body, html {
-    background-color: black;
-    color: lightgray;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+}
+
+body, html {
+    background-color: black;
+    color: lightgray;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 nav {
@@ -49,7 +50,7 @@ nav a:hover {
     width: 100vw;
     margin-left: 0px;
     margin-right: 0px;
-    background-image: url('../images/intelCircuit.jpg');
+    background-image: url('/images/intelCircuit.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -89,7 +90,7 @@ nav a:hover {
     padding: 50px 20px;
     height: 100vh;
     text-align: center;
-    background-image: url('../images/blackboard.jpg');
+    background-image: url('/images/blackboard.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -160,102 +161,295 @@ nav a:hover {
     color: black;
 }
 
-/* General Section Styling */
 #projects {
     padding: 50px 20px;
-    background-color: #111111; /* Dark grey background */
-    color: #ddd; /* Light grey text */
+    /* Remove fixed height to allow content to determine the height */
     text-align: center;
+    /* background-image: url('/images/emptyCircuit.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: multiply;
 }
 
 #projects h2 {
+    font-family: "Poppins", sans-serif;
     font-size: 36px;
     font-weight: 600;
-    color: #fff;
+    color: lightgray;
     margin-bottom: 30px;
     text-transform: uppercase;
+    position: relative;
+    top: 5%;
 }
 
-/* Project Row Styling */
-.projects-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.project-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Force exactly 3 columns */
     gap: 20px;
-    border-bottom: 1px solid #555;
-    padding-bottom: 20px;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center; 
+    justify-items: center;   /* Center items in each column */
+    width: max-content;      /* Make container width only as wide as needed */
+    margin: 0 auto;
 }
 
-.project-row.reverse {
-    flex-direction: row-reverse; /* Flip thumbnail and description */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure it fits within the grid column */
+    max-width: 300px; /* Optional: Set a maximum width for uniformity */
 }
 
-/* Thumbnail Styling */
-.project-thumbnail {
-    flex: 1;
-    text-align: center;
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.project-thumbnail img {
-    max-width: 90%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+.project-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
-.project-thumbnail .btn {
+.project-card h3 {
+    font-weight: 600;
+    margin: 15px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.project-card p {
+    color: #ccc;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 15px 15px;
+}
+
+.btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
+    margin: 10px 0 15px;
+    padding: 10px 15px;
+    color: white;
     background-color: #007BFF;
-    color: #fff;
-    border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
 }
 
-.project-thumbnail .btn:hover {
+.btn:hover {
     background-color: #0056b3;
 }
 
-/* Description Styling */
-.project-description {
-    flex: 2;
-    text-align: left;
-    padding: 20px;
+/* Adjustments for smaller screens */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium-sized screens */
+    }
 }
 
-.project-description h3 {
-    font-size: 24px;
-    color: #fff;
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
+    }
+}
+
+/* Resume and Contact Sections */
+/* Resume Section Styling */
+#resume {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+#resume h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #f49910;
+    margin-bottom: 20px;
+}
+
+#resume p {
+    font-size: 18px;
+    color: lightgray;
+    margin-bottom: 20px;
+}
+
+.resume-highlights {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    color: white;
+    padding: 20px 40px;
+}
+
+/* Resume Sections */
+.resume-section {
+    margin-bottom: 30px;
+}
+
+.resume-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #f49910;
     margin-bottom: 15px;
 }
 
-.project-description p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #ddd;
+.resume-section ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .project-row {
-        flex-direction: column;
-        text-align: center;
-    }
+.resume-section li {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
 
-    .project-row.reverse {
-        flex-direction: column;
-    }
+.resume-section li strong {
+    color: #f49910;
+}
 
-    .project-thumbnail, .project-description {
-        text-align: center;
-    }
+.resume-section ul ul {
+    margin-left: 20px;
+}
+
+.resume-section ul ul li {
+    font-size: 16px;
+    color: lightgray;
+    line-height: 1.6;
+}
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Me Section Styling */
+#contactme {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+#contactme h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #f49910;
+    margin-bottom: 20px;
+}
+
+#contactme p {
+    font-size: 18px;
+    color: lightgray;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    margin: 8px 0 4px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #f49910;
+    margin-bottom: 15px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info li a {
+    color: #f49910;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info li a:hover {
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+footer p, footer a {
+    color: lightgray;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: #f49910;
 }
