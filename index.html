@@ -46,81 +46,61 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <div class="projects-container">
-            <!-- Project 1 -->
-            <div class="project-row">
-                <div class="project-thumbnail">
-                    <img src="images/vga-controller-thumbnail.png" alt="VGA Controller">
-                    <a href="vga-controller.html" class="btn">View Here</a>
-                </div>
-                <div class="project-description">
-                    <h3>VGA Controller</h3>
-                    <p>
-                        Designed and implemented a Video Graphics Array (VGA) controller on the DE1-SoC board. The system achieved a 1280x1024 resolution at 60 Hz refresh rate.
-                        Key features include signal synchronization using a phase-locked loop (PLL), graphical figure manipulation, and color control via switches. This project
-                        demonstrated proficiency in VGA signal generation, synchronization logic, and hardware design using VHDL.
-                    </p>
-                </div>
+        <div class="projects-grid">
+            <!-- Project 1: VGA Controller -->
+            <div class="project-card">
+                <img src="images/vga-controller-thumbnail.png" alt="VGA Controller" class="project-image">
+                <h3>VGA Controller</h3>
+                <p>
+                    Designed and implemented a Video Graphics Array (VGA) controller on the DE1-SoC board. The system achieved a 1280x1024 resolution at 60 Hz refresh rate.
+                    Key features include signal synchronization using a phase-locked loop (PLL), graphical figure manipulation, and color control via switches. This project
+                    demonstrated proficiency in VGA signal generation, synchronization logic, and hardware design using VHDL.
+                </p>
+                <a href="vga-controller.html" class="btn">Learn More</a>
             </div>
     
-            <!-- Project 2 -->
-            <div class="project-row reverse">
-                <div class="project-description">
-                    <h3>Digital Audio System</h3>
-                    <p>
-                        Developed a digital audio system that captures analog sound via a microphone, converts it to digital signals, processes the data, and plays it back through speakers.
-                        Implemented with the DE1-SoC board and the WM8731 CODEC, the system utilized real-time audio processing and achieved high-quality audio output with minimal latency.
-                    </p>
-                </div>
-                <div class="project-thumbnail">
-                    <img src="images/audio-system-thumbnail.png" alt="Digital Audio System">
-                    <a href="digital-audio-system.html" class="btn">View Here</a>
-                </div>
+            <!-- Project 2: Digital Audio System -->
+            <div class="project-card">
+                <img src="images/audio-system-thumbnail.png" alt="Digital Audio System" class="project-image">
+                <h3>Digital Audio System</h3>
+                <p>
+                    Developed a digital audio system that captures analog sound via a microphone, converts it to digital signals, processes the data, and plays it back through speakers.
+                    Implemented with the DE1-SoC board and the WM8731 CODEC, the system utilized real-time audio processing and achieved high-quality audio output with minimal latency.
+                </p>
+                <a href="digital-audio-system.html" class="btn">Learn More</a>
             </div>
     
-            <!-- Project 3 -->
-            <div class="project-row">
-                <div class="project-thumbnail">
-                    <img src="images/hps-fpga-thumbnail.png" alt="HPS-FPGA Integration">
-                    <a href="hps-fpga.html" class="btn">View Here</a>
-                </div>
-                <div class="project-description">
-                    <h3>HPS-FPGA Integration</h3>
-                    <p>
-                        Integrated the Hard Processor System (HPS) and FPGA sides of the DE1-SoC board to process accelerometer data and display tilt angles on LEDs in real-time.
-                        The project utilized memory-mapped I/O for efficient hardware-software communication, showcasing seamless integration of embedded systems concepts.
-                    </p>
-                </div>
+            <!-- Project 3: HPS-FPGA Integration -->
+            <div class="project-card">
+                <img src="images/hps-fpga-thumbnail.png" alt="HPS-FPGA Integration" class="project-image">
+                <h3>HPS-FPGA Integration</h3>
+                <p>
+                    Integrated the Hard Processor System (HPS) and FPGA sides of the DE1-SoC board to process accelerometer data and display tilt angles on LEDs in real-time.
+                    The project utilized memory-mapped I/O for efficient hardware-software communication, showcasing seamless integration of embedded systems concepts.
+                </p>
+                <a href="hps-fpga.html" class="btn">Learn More</a>
             </div>
     
-            <!-- Project 4 -->
-            <div class="project-row reverse">
-                <div class="project-description">
-                    <h3>RISC CPU Design</h3>
-                    <p>
-                        Currently designing a custom Reduced Instruction Set Computer (RISC) CPU architecture with a focus on optimizing instruction sets, control logic, and pipeline efficiency.
-                        The design includes implementing key components such as an Arithmetic Logic Unit (ALU), control unit, and memory access using VHDL.
-                    </p>
-                </div>
-                <div class="project-thumbnail">
-                    <img src="images/risc-cpu-thumbnail.png" alt="RISC CPU Design">
-                    <a href="risc-cpu.html" class="btn">View Here</a>
-                </div>
+            <!-- Project 4: RISC CPU Design -->
+            <div class="project-card">
+                <img src="images/risc-cpu-thumbnail.png" alt="RISC CPU Design" class="project-image">
+                <h3>RISC CPU Design</h3>
+                <p>
+                    Currently designing a custom RISC CPU architecture with a focus on optimizing instruction sets and control logic. This project involves implementing core components
+                    such as the ALU, control unit, and memory access using VHDL. The CPU will be simulated and synthesized for functional verification.
+                </p>
+                <a href="risc-cpu.html" class="btn">Learn More</a>
             </div>
     
-            <!-- Project 5 -->
-            <div class="project-row">
-                <div class="project-thumbnail">
-                    <img src="images/ir-decoding-thumbnail.png" alt="IR Signal Decoding">
-                    <a href="ir-decoding.html" class="btn">View Here</a>
-                </div>
-                <div class="project-description">
-                    <h3>IR Signal Decoding</h3>
-                    <p>
-                        Developed an infrared (IR) signal decoding system to process NEC protocol signals. This project involved implementing a state machine in VHDL to read, decode,
-                        and verify 32-bit IR signals. The decoded output was displayed on seven-segment displays, enabling practical applications such as remote control systems.
-                    </p>
-                </div>
+            <!-- Project 5: IR Signal Decoding -->
+            <div class="project-card">
+                <img src="images/ir-decoding-thumbnail.png" alt="IR Signal Decoding" class="project-image">
+                <h3>IR Signal Decoding</h3>
+                <p>
+                    Created a system to decode NEC protocol infrared signals using the DE1-SoC board. The project involved implementing a state machine to process IR signals
+                    and display decoded data on seven-segment displays, enabling remote-control functionality.
+                </p>
+                <a href="ir-decoding.html" class="btn">Learn More</a>
             </div>
         </div>
     </section>
@@ -130,13 +110,128 @@
 
     <section id="resume">
         <h2>Resume</h2>
-        <p><a href="resume.pdf" target="_blank" class="btn">Download Resume</a></p>
+        <p>Explore my educational background, technical skills, and professional experience in engineering, research, and leadership roles.</p>
+        
+        <!-- Resume Highlights Section Split Into Subsections -->
+        <div class="resume-highlights">
+            
+            <!-- Education Section -->
+            <div class="resume-section">
+                <h3>Education</h3>
+                <ul>
+                    <li><strong>University of Miami</strong> – B.S. in Computer Engineering (Pre-Med), Minor in Mathematics – May 2025</li>
+                    <li>GPA: 3.85 | Honors: Provost’s Honor Roll, Dean’s List</li>
+                    <li>Relevant Courses: Data Structures, Algorithms, Operating Systems, Processors, Systems Programming, Electronics</li>
+                </ul>
+            </div>
+    
+            <!-- Technical Skills Section -->
+            <div class="resume-section">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li><strong>Programming Languages:</strong> C, C++, Python, Assembly, VHDL</li>
+                    <li><strong>Technologies & Frameworks:</strong> Windows, MacOS, iOS, UNIX, Arduino, MATLAB, AutoCAD</li>
+                    <li><strong>Languages:</strong> Fluent in Russian</li>
+                </ul>
+            </div>
+    
+            <!-- Professional Experience Section -->
+            <div class="resume-section">
+                <h3>Professional Experience</h3>
+                <ul>
+                    <li>
+                        <strong>Service Desk Technician</strong> – Miami Herbert Business School (July 2023 - Present)
+                        <ul>
+                            <li>Automated application downloads for new devices using batch scripts, streamlining IT processes.</li>
+                            <li>Translated complex technical issues into clear, actionable steps for non-technical users.</li>
+                            <li>Collaborated with the IT team to improve tech support and streamline processes.</li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <strong>Research Assistant</strong> – University of Miami Neurosensory Lab (June 2023 - December 2023)
+                        <ul>
+                            <li>Automated EMG data analysis using MATLAB, improving efficiency in research data interpretation.</li>
+                            <li>Administered and managed EEG testing sessions, contributing to the study of brain activity patterns.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Projects Section -->
+            <div class="resume-section">
+                <h3>Selected Projects</h3>
+                <ul>
+                    <li><strong>32-bit MIPS RISC Processor</strong> – VHDL, Quartus Prime, ModelSim
+                        <ul>
+                            <li>Designed a 32-bit MIPS processor with a fully functional FSM-based control unit and data path modules.</li>
+                            <li>Tested ALU, memory control, and instruction execution stages using ModelSim simulations.</li>
+                        </ul>
+                    </li>
+    
+                    <li><strong>NEC IR Protocol Decoder</strong> – VHDL, Quartus Prime, ModelSim
+                        <ul>
+                            <li>Implemented a VHDL-based FSM for decoding 32-bit IR signals with address and command verification.</li>
+                            <li>Displayed decoded commands on seven-segment displays and verified system functionality using an oscilloscope.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Leadership & Extracurriculars Section -->
+            <div class="resume-section">
+                <h3>Leadership & Extracurriculars</h3>
+                <ul>
+                    <li><strong>Treasurer</strong> – Eta Kappa Nu Honors Society (May 2023 - Present)
+                        <ul>
+                            <li>Coordinated and funded hackathons, fostering technical project development for peers.</li>
+                            <li>Provided tutoring for advanced computer engineering courses not supported by the university's tutoring center.</li>
+                        </ul>
+                    </li>
+    
+                    <li><strong>Success Coach</strong> – Breakthrough Miami (October 2022 - May 2023)
+                        <ul>
+                            <li>Mentored and guided over 80 underprivileged high school students in academic and personal development.</li>
+                            <li>Facilitated group activities and one-on-one coaching, promoting student success and leadership growth.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Download Button Repositioned -->
+        <a href="documents/LeoAntonevichResume.pdf" target="_blank" class="btn">Download Full Resume</a>
     </section>
+    
+    
 
-    <section id='contactme'>
-        <h2> Contact Me</h2>
-        <p> Contact me please!</p>
+    <section id="contactme">
+        <h2>Contact Me</h2>
+        <p>I’m currently seeking opportunities in embedded systems, FPGA development, and software engineering. Feel free to reach out!</p>
+    
+        <form action="https://formsubmit.co/your-email@example.com" method="POST" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+    
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    
+        <div class="contact-info">
+            <h3>Find Me Online</h3>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/leo-antonevich-b5826a230/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/brother-antone" target="_blank">GitHub</a></li>
+                <li><a href="mailto:lda68@miami.edu">Email: lda68@miami.edu</a></li>
+            </ul>
+        </div>
     </section>
+    
 
     <footer>
         <p>© 2024 Leo Antonevich | Embedded Systems Portfolio</p>

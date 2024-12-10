@@ -4,22 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VGA Controller Project</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/vga-styles.css">
 </head>
 <body>
     <nav>
         <a href="index.html">// Home</a>
         <a href="digital-audio-system.html">// Next Project</a>
     </nav>
+
     <section>
         <h2>VGA Controller</h2>
-        <p>Full description of the VGA Controller project goes here...</p>
+        <article>
+            <h3>Abstract</h3>
+            <p>
+                This project required using a DE1-SoC board for the implementation of the VGA on a 1280x1024 resolution and 60 Hz refresh rate screen. The main objectives were understanding VGA signal communication, employing phase-locked loops (PLLs), and implementing synchronization and display logic to render simple graphical outputs.
+            </p>
+
+            <h3>Challenge</h3>
+            <p>
+                The main task was creating a VGA controller capable of producing control and video signals for a monitor display. This required implementing a pixel clock using PLLs and understanding VGA timing standards, synchronization, and control signal generation. Developing controls to manipulate graphical figures on the display was another essential task.
+            </p>
+
+            <h3>Approach</h3>
+            <ul>
+                <li><strong>Phase-Locked Loop (PLL) Setup:</strong> A 108 MHz pixel clock was generated using Quartus Prime’s PLL tool, converting the 50 MHz reference clock into the desired frequency.</li>
+                <li><strong>Synchronization Control:</strong> Horizontal and vertical sync pulses were generated using timing standards for the 1280x1024 resolution at 60 Hz.</li>
+                <li><strong>Display Control and Figure Manipulation:</strong> Graphical figure movement and color changes were controlled via switches on the DE1-SoC board.</li>
+            </ul>
+
+            <h3>Experiment Setup</h3>
+            <p>
+                The experiment involved the DE1-SoC development board connected to an external monitor. Quartus Prime was used for synthesis and compilation of VHDL files controlling the display.
+            </p>
+
+            <h3>Results and Analysis</h3>
+            <p>
+                The VGA controller successfully generated video signals and displayed a consistent yellow background with two moving squares. The project demonstrated proficiency in digital design and hardware implementation using VHDL.
+            </p>
+        </article>
     </section>
+
     <div class="navigation-buttons">
         <a href="index.html#projects" class="arrow-btn">← Back to Projects</a>
         <a href="digital-audio-system.html" class="arrow-btn">Next Project →</a>
     </div>
-    
+
     <footer>
         <p>© 2024 Leo Antonevich | Embedded Systems Portfolio</p>
     </footer>

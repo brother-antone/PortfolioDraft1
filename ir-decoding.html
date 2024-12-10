@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR Decoding Project</title>
+    <link rel="stylesheet" href="css/ir-decoding-styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">// Home</a>
+        <a href="digital-audio-system.html">// Next Project</a>
+    </nav>
+
+    <section>
+        <h2>IR Decoding</h2>
+        <article>
+            <h3>Abstract</h3>
+            <p>
+                This project required the design, implementation, and testing of a NEC IR protocol decoder using the DE1-SoC development board. A functional state machine was developed to interpret the Altera IR remote and any NEC-protocol remote. Decoded data was displayed on seven-segment displays, while repeat codes were indicated with LEDs. Timing tolerances and noise filtering ensured accurate signal decoding in real time.
+            </p>
+
+            <h3>Challenge</h3>
+            <p>
+                Infrared (IR) communication is commonly used in remotes and automation systems. The NEC IR protocol defines a standard for encoding 32-bit signals into modulated light pulses. The main challenges were precise timing, data interpretation, noise filtering, and displaying address and command codes accurately.
+            </p>
+
+            <h3>Approach</h3>
+            <ul>
+                <li><strong>Understanding the NEC Protocol:</strong> Interpreted 32-bit signals including addresses, commands, and inverses.</li>
+                <li><strong>System Design:</strong> A state machine was designed with states including Idle, Start_Detect, Decode, Verify, Display, and Repeat.</li>
+                <li><strong>VHDL Components:</strong> Key files included IR_StateMachine.vhd, BCD_to_7Seg.vhd, HexTo7SegDisplay.vhd, and TopLevel.vhd.</li>
+                <li><strong>Debugging and Testing:</strong> Timing variability and signal overlap were addressed using ModelSim simulations and Quartus Prime synthesis.</li>
+            </ul>
+
+            <h3>Experiment Setup</h3>
+            <p>
+                The system was designed and tested using ModelSim and Quartus Prime, with hardware validation using an oscilloscope. Inputs included the DE1-SoC IR receiver and remotes using the NEC protocol. Outputs were displayed on the seven-segment displays, while repeat codes were indicated on LEDs.
+            </p>
+
+            <h3>Results and Analysis</h3>
+            <p>
+                The IR decoding system was successfully implemented, achieving:
+                <ul>
+                    <li>Accurate decoding of 8-bit and custom 16-bit addresses from NEC protocol signals.</li>
+                    <li>Correct data display on seven-segment displays.</li>
+                    <li>Successful handling of repeat codes with LED indicators.</li>
+                    <li>Minimal timing errors through signal normalization and timing tolerances.</li>
+                </ul>
+            </p>
+        </article>
+    </section>
+
+    <div class="navigation-buttons">
+        <a href="index.html#projects" class="arrow-btn">← Back to Projects</a>
+        <a href="digital-audio-system.html" class="arrow-btn">Next Project →</a>
+    </div>
+
+    <footer>
+        <p>© 2024 Leo Antonevich | Embedded Systems Portfolio</p>
+    </footer>
+</body>
+</html>

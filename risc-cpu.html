@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RISC CPU Design Project</title>
+    <link rel="stylesheet" href="css/risc-cpu-styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">// Home</a>
+        <a href="ir-decoding.html">// Next Project</a>
+    </nav>
+
+    <section>
+        <h2>RISC CPU Design</h2>
+        <article>
+            <h3>Overview</h3>
+            <p>
+                This project required the design, simulation, and implementation of a 32-bit MIPS RISC processor using VHDL. The project focused on a simplified version featuring 32 general-purpose registers, a 32-bit instruction set architecture, and modular components for the datapath and control. Verification was conducted using ModelSim simulations and hardware synthesis on the DE1-SoC FPGA board.
+            </p>
+
+            <h3>Software and Hardware</h3>
+            <ul>
+                <li><strong>Board Used:</strong> DE1-SoC Development Board</li>
+                <li><strong>Software Tools:</strong> ModelSim (for simulation and verification)</li>
+            </ul>
+
+            <h3>Description</h3>
+            <p>
+                The processor supports two primary instruction types:
+                <ul>
+                    <li><strong>R-Format:</strong> Arithmetic and logical operations (add, sub, and, or).</li>
+                    <li><strong>I-Format:</strong> Immediate instructions (addi, andi, ori) and memory operations (lw, sw).</li>
+                </ul>
+            </p>
+
+
+            <h3>High-Level Design</h3>
+            <ul>
+                <li><strong>ALU:</strong> Executes arithmetic and logical operations.</li>
+                <li><strong>Register File:</strong> Stores 32 registers with two read ports and one write port.</li>
+                <li><strong>Memory:</strong> Unified memory for instructions and data.</li>
+                <li><strong>PC Counter:</strong> Tracks the address of the next instruction.</li>
+                <li><strong>Multiplexers:</strong> Various MUXes for instruction selection.</li>
+                <li><strong>Control Unit:</strong> FSM-based control signal generation.</li>
+            </ul>
+
+            <h3>Design Synthesis</h3>
+            <p>
+                The control unit implements a Finite State Machine (FSM) with eight states ensuring the correct execution of instructions through sequential transitions based on control signals.
+            </p>
+
+            <ul>
+                <li><strong>Fetch:</strong> Retrieves the next instruction from memory using the program counter (PC).</li>
+                <li><strong>Waiting:</strong> A buffer state allowing instruction signals to settle before decoding.</li>
+                <li><strong>Decode:</strong> Decodes the fetched instruction, identifying the opcode, source, and destination registers.</li>
+                <li><strong>EX_R (Execute R-format):</strong> Performs arithmetic or logical operations using the ALU for R-type instructions (e.g., add, sub, and, or).</li>
+                <li><strong>EX_I (Execute I-format):</strong> Executes immediate operations such as addition or logical instructions using immediate values.</li>
+                <li><strong>MEM_LW (Memory Load Word):</strong> Reads a word from memory into a register using a calculated memory address.</li>
+                <li><strong>MEM_SW (Memory Store Word):</strong> Writes a register's value into a memory address calculated using the ALU.</li>
+                <li><strong>WB (Write Back):</strong> Writes results from memory or the ALU back into the destination register, completing the instruction cycle.</li>
+            </ul>
+
+
+            <h3>Results and Simulations</h3>
+            <p>
+                Simulations in ModelSim verified the correct flow of instructions through the FSM, confirming the accuracy of the processor's datapath and control logic. Functional tests showed that registers and memory updated correctly based on test instructions.
+            </p>
+
+            <h3>Conclusion</h3>
+            <p>
+                This project successfully demonstrated the design and implementation of a simplified 32-bit MIPS RISC processor. Future improvements could include expanding the instruction set, adding branching and jumping, and incorporating pipeline stages for higher performance.
+            </p>
+        </article>
+    </section>
+
+    <div class="navigation-buttons">
+        <a href="index.html#projects" class="arrow-btn">← Back to Projects</a>
+        <a href="ir-decoding.html" class="arrow-btn">Next Project →</a>
+    </div>
+
+    <footer>
+        <p>© 2024 Leo Antonevich | Embedded Systems Portfolio</p>
+    </footer>
+</body>
+</html>

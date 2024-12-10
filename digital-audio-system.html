@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Audio System Project</title>
+    <link rel="stylesheet" href="css/audio-styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">// Home</a>
+        <a href="hps-fpga.html">// Next Project</a>
+    </nav>
+
+    <section>
+        <h2>Digital Audio System</h2>
+        <article>
+            <h3>Abstract</h3>
+            <p>
+                This project required the design and implementation of a digital audio system that encodes and decodes sound using the DE1-SoC development board. The primary objective was to create a circuit capable of converting analog signals into digital form, storing them in a buffer, and then converting them back to analog signals for output.
+            </p>
+
+            <h3>Challenge</h3>
+            <p>
+                The goal was to develop a digital audio system that converts analog signals from a microphone into digital values, stores them in a buffer, and then converts them back to analog for playback. This required integrating the WM8731 audio CODEC with the Altera Audio IP Core, sampling audio at 48 kHz.
+            </p>
+
+            <h3>Approach</h3>
+            <ul>
+                <li><strong>Clock Generator:</strong> Generated the necessary clock signals, including a 50 MHz clock for the DE1-SoC and an audio clock.</li>
+                <li><strong>Audio/Video Configuration:</strong> Initialized the audio system, set up the sample rate, and enabled audio I/O communication.</li>
+                <li><strong>Audio CODEC Interface:</strong> Managed the analog-to-digital and digital-to-analog conversions, ensuring real-time audio processing.</li>
+            </ul>
+
+            <h3>Experiment Setup</h3>
+            <p>
+                The project was synthesized using Quartus Prime, referencing the DE1-SoC User Manual and Altera Audio IP-Core documentation. The hardware setup included a microphone connected to the MIC input and speakers connected to the Line-out output of the DE1-SoC board.
+            </p>
+
+            <h3>Results and Analysis</h3>
+            <p>
+                The digital audio system successfully converted audio input from the microphone into digital signals, stored them in a buffer, and played them back through speakers with minimal delay. Clear audio quality and correct synchronization verified the implementation of the clock generation, audio configuration, and CODEC interfaces.
+            </p>
+        </article>
+    </section>
+
+    <div class="navigation-buttons">
+        <a href="index.html#projects" class="arrow-btn">← Back to Projects</a>
+        <a href="hps-fpga.html" class="arrow-btn">Next Project →</a>
+    </div>
+
+    <footer>
+        <p>© 2024 Leo Antonevich | Embedded Systems Portfolio</p>
+    </footer>
+</body>
+</html>

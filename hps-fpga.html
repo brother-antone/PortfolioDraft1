@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPS-FPGA Integration Project</title>
+    <link rel="stylesheet" href="css/hps-fpga-styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">// Home</a>
+        <a href="risc-cpu.html">// Next Project</a>
+    </nav>
+
+    <section>
+        <h2>HPS-FPGA Integration</h2>
+        <article>
+            <h3>Abstract</h3>
+            <p>
+                This project required the design and implementation of a system integrating the DE1-SoC development board's HPS (Hard Processor System) and FPGA sides. The accelerometer (HPS) communicated with the LEDs (FPGA) to display tilt data. The primary objective was to create a system displaying the DE1-SoC board's tilt angle relative to the x-axis. This project demonstrated real-time data collection using low-level memory mapping for hardware communication.
+            </p>
+
+            <h3>Challenge</h3>
+            <p>
+                The project aimed to develop a real-time system that reads accelerometer data from the DE1-SoC's ADXL345 sensor and displays the tilt angle (x-axis) on the board's LEDs. Configuring the HPS and FPGA components using direct memory mapping was essential, requiring precise hardware communication and LED output control.
+            </p>
+
+            <h3>Approach</h3>
+            <ul>
+                <li><strong>Accelerometer Configuration:</strong> The ADXL345 accelerometer was initialized using I2C communication, configuring its registers and setting measurement modes.</li>
+                <li><strong>LED Setup:</strong> Memory-mapped I/O was used to control FPGA-side LEDs by accessing hardware registers.</li>
+                <li><strong>System Integration:</strong> Data from the accelerometer was mapped to LED patterns representing tilt angles in real-time.</li>
+            </ul>
+
+            <h3>Experiment Setup</h3>
+            <p>
+                The system was developed in C and tested on the DE1-SoC board using multiple source files. The board was tilted along its x-axis, causing corresponding LEDs to light up sequentially based on the detected tilt.
+            </p>
+
+            <h3>Results and Analysis</h3>
+            <p>
+                The system accurately displayed tilt data on the LEDs with minimal delay. The x-axis data from the ADXL345 was efficiently mapped, demonstrating proper memory management and data processing. The project successfully showed the potential of HPS-FPGA integration for real-time hardware control.
+            </p>
+        </article>
+    </section>
+
+    <div class="navigation-buttons">
+        <a href="index.html#projects" class="arrow-btn">← Back to Projects</a>
+        <a href="risc-cpu.html" class="arrow-btn">Next Project →</a>
+    </div>
+
+    <footer>
+        <p>© 2024 Leo Antonevich | Embedded Systems Portfolio</p>
+    </footer>
+</body>
+</html>
